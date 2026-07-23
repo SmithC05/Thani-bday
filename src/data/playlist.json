@@ -1,0 +1,20 @@
+{
+  "tracks": [
+    {
+      "id": "intro",
+      "src": "/audio/music/intro.mp3",
+      "volume": 0.5,
+      "crossfade": 2000
+    },
+    {
+      "id": "gallery",
+      "src": "/audio/music/ph_gallery.mp3",
+      "volume": 0.7,
+      "crossfade": 3000
+    }
+  ],
+  "sfx": {
+    "sparkle": "/audio/sound-effects/sparkle.mp3",
+    "heartbeat": "/audio/sound-effects/heartbeat.mp3"
+  }
+}
