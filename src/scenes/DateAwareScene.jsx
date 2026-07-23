@@ -4,6 +4,8 @@ import { useDateLock } from '../hooks/useDateLock';
 import { AdvanceJourney } from './AdvanceJourney';
 import { BirthdayJourney } from './BirthdayJourney';
 
+import { devMode } from '../config';
+
 /**
  * The Branching Director
  * Decides whether to show the Advance countdown or the true Birthday Reveal.
@@ -19,7 +21,7 @@ export function DateAwareScene() {
     return () => window.removeEventListener('developer-unlock', handleUnlock);
   }, []);
 
-  const showBirthday = timeState.isUnlocked || isDevUnlocked;
+  const showBirthday = timeState.isUnlocked || isDevUnlocked || (devMode.enabled && devMode.bypassDate);
 
   return (
     <AnimatePresence mode="wait">

@@ -1,12 +1,13 @@
 import { useState, useCallback } from 'react';
 import { SCENES } from '../constants';
+import { devMode } from '../config';
 
 /**
  * Scene Engine
  * Orchestrates the cinematic scene flow without traditional routing.
  */
 export function useSceneManager() {
-  const [currentScene, setCurrentScene] = useState(SCENES.LOADING);
+  const [currentScene, setCurrentScene] = useState(devMode.enabled && devMode.startScene ? devMode.startScene : SCENES.LOADING);
 
   const transitionTo = useCallback((newScene) => {
     // Allows us to intercept GSAP page transitions before React unmounts
@@ -22,10 +23,13 @@ export function useSceneManager() {
     const order = [
       SCENES.LOADING, 
       SCENES.HANDWRITING,
-      SCENES.DATE_AWARE, 
-      SCENES.INTRO, 
-      SCENES.GALLERY, 
-      SCENES.MESSAGE
+      SCENES.DATE_AWARE,
+      SCENES.SECRET_VAULT,
+      SCENES.MEMORY_JOURNEY_SOLO,
+      SCENES.MEMORY_JOURNEY_TOGETHER,
+      SCENES.INTERACTIVE_WISHES,
+      SCENES.ARTIST_CHAPTER,
+      SCENES.FINAL_MESSAGE
     ];
     const currentIndex = order.indexOf(currentScene);
     if (currentIndex >= 0 && currentIndex < order.length - 1) {

@@ -9,6 +9,12 @@ export const birthdayConfig = {
   nickname: "Thani",
 };
 
+// The secret PIN for the birthday lock screen.
+// 0308 = August 3rd (her birthday 🎂)
+export const vaultConfig = {
+  secretPin: "0308",
+};
+
 export const animationTimings = {
   micro: 0.4,
   reveal: 1.5,
@@ -21,4 +27,10 @@ export const themeConfig = {
     background: '#0a0a0a',
     gold: '#eab308',
   }
+};
+
+export const devMode = {
+  enabled: true, // Master switch for dev features
+  startScene: null, // e.g., 'MEMORY_JOURNEY_SOLO' (null to start from beginning)
+  bypassDate: true, // If true, treats the date as after August 3rd
 };

@@ -4,9 +4,12 @@ export const SCENES = {
   LOADING: 'LOADING',
   HANDWRITING: 'HANDWRITING', // Phase 8.5: Intermediate reveal
   DATE_AWARE: 'DATE_AWARE', // Phase 8: Pre-birthday countdown scene
-  INTRO: 'INTRO', // Cinematic opening
-  GALLERY: 'GALLERY', // Artist chapter / photos
-  MESSAGE: 'MESSAGE', // Final personal message
+  SECRET_VAULT: 'SECRET_VAULT', // Phase 9.1: Memory Unlock
+  MEMORY_JOURNEY_SOLO: 'MEMORY_JOURNEY_SOLO', // Phase 9.2: Cinematic photo storytelling (Solo)
+  MEMORY_JOURNEY_TOGETHER: 'MEMORY_JOURNEY_TOGETHER', // Phase 9.3: Cinematic photo storytelling (Together)
+  INTERACTIVE_WISHES: 'INTERACTIVE_WISHES', // Phase 10: Hidden Magic
+  ARTIST_CHAPTER: 'ARTIST_CHAPTER', // Phase 11: The climax
+  FINAL_MESSAGE: 'FINAL_MESSAGE', // Phase 12: Grand Finale
 };
 
 // Target date for the birthday (Set to mock date for dev if needed, or actual date)
