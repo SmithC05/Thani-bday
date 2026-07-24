@@ -30,7 +30,7 @@ export const themeConfig = {
 };
 
 export const devMode = {
-  enabled: true, // Master switch for dev features
+  enabled: false, // Master switch for dev features
   startScene: null, // e.g., 'MEMORY_JOURNEY_SOLO' (null to start from beginning)
-  bypassDate: true, // If true, treats the date as after August 3rd
+  bypassDate: false, // If true, treats the date as after August 3rd
 };
